@@ -3,42 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abrir Activity Launcher</title>
+
+    <title>Activity Launcher</title>
 
     <style>
         body {
+            margin: 0;
+            padding: 50px 20px;
+            background: #f4f4f4;
             font-family: Arial, sans-serif;
             text-align: center;
-            padding: 40px 20px;
-            background: #f4f4f4;
         }
 
         h1 {
             font-size: 28px;
+            margin-bottom: 15px;
         }
 
         p {
             font-size: 18px;
             color: #555;
+            margin-bottom: 30px;
         }
 
         button {
-            font-size: 20px;
-            padding: 16px 30px;
-            border: none;
-            border-radius: 12px;
             background: #111;
             color: white;
+            border: none;
+            border-radius: 12px;
+            padding: 16px 30px;
+            font-size: 20px;
             cursor: pointer;
         }
 
         button:active {
-            transform: scale(0.98);
-        }
-
-        #mensaje {
-            margin-top: 20px;
-            font-size: 16px;
+            transform: scale(0.97);
         }
     </style>
 </head>
@@ -51,29 +50,11 @@
         Presioná el botón para abrir Activity Launcher.
     </p>
 
-    <button id="abrir">
-        Abrir Activity Launcher
-    </button>
-
-    <div id="mensaje"></div>
-
-    <script>
-        const intent =
-            "intent://open/#Intent;" +
-            "action=android.intent.action.MAIN;" +
-            "category=android.intent.category.LAUNCHER;" +
-            "package=com.appstalking.activitylauncher;" +
-            "end";
-
-        document.getElementById("abrir").addEventListener("click", function () {
-
-            document.getElementById("mensaje").textContent =
-                "Intentando abrir Activity Launcher...";
-
-            window.location.href = intent;
-
-        });
-    </script>
+    <a href="intent://com.appstalking.activitylauncher/#Intent;scheme=android-app;end">
+        <button>
+            Abrir Activity Launcher
+        </button>
+    </a>
 
 </body>
 </html>
