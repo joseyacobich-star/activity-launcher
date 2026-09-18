@@ -4,22 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Abrir Activity Launcher</title>
-<style>
-body{font-family:Arial,sans-serif;text-align:center;padding:40px;background:#f4f4f4}
-button{font-size:20px;padding:16px 28px;border:0;border-radius:12px;background:#111;color:#fff}
-</style>
 </head>
 <body>
-<h2>Activity Launcher</h2>
-<p>Presioná el botón para abrir la aplicación.</p>
 <button id="open">Abrir Activity Launcher</button>
-<p id="msg"></p>
+
 <script>
-const intent = 'intent://open/#Intent;scheme=activitylauncher;package=com.appstalking.activitylauncher;component=com.appstalking.activitylauncher/.MainActivity;end';
-document.getElementById("open").addEventListener("click", () => {
-  document.getElementById("msg").textContent = "Intentando abrir…";
-  window.location.href = intent;
-});
+document.getElementById("open").onclick = function () {
+    window.location.href =
+      "intent://open/#Intent;scheme=activitylauncher;package=com.appstalking.activitylauncher;component=com.appstalking.activitylauncher/.AppTalking_SplashActivity;end";
+};
 </script>
 </body>
 </html>
